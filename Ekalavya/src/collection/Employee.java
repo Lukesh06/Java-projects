@@ -2,11 +2,11 @@ package collection;
 
 import java.util.Objects;
 
-public class Employee {
+public class Employee implements Comparable<Employee>{
 
 	private String name;
 
-	private int empId;
+	private Integer empId;
 
 	public String getName() {
 		return name;
@@ -47,6 +47,11 @@ public class Employee {
 
 		return (employee.getEmpId() == this.empId && employee.getName().equals(this.name));
 
+	}
+
+	@Override
+	public int compareTo(Employee employee) {
+		return this.empId.compareTo(employee.empId);
 	}
 
 }
