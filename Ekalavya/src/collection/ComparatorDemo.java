@@ -1,34 +1,31 @@
 package collection;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
 public class ComparatorDemo {
 
 	public static void main(String[] args) {
-
-		List<Student> studentList = new ArrayList<>();
 		
-		Student s1= new Student("Ashish", 12, "Indore");
-		Student s2= new Student("Ramesh", 10, "Bhopal");
-		Student s3= new Student("Dinesh", 11, "Agra");
+		Set set2 = new TreeSet<>();
 		
-		studentList.add(s1);
-		studentList.add(s2);
-		studentList.add(s3);
+		set2.add(null);
+		set2.add(30);
+		set2.add(false);
+		set2.add(2.5);
 		
-		Collections.sort(studentList, new StudentNameComparator());
+		System.out.println(set2);
 		
-		//System.out.println(studentList);
+		Student s1= new Student("Ashish", 25, "Bhopal");
+		Student s2= new Student("Ashish", 10, "Bhopal");
+		Student s3= new Student("Ashish", 5, "Gwalior");
+		Student s4= new Student("Ramesh", 5, "Gwalior");
 		
-		
-		Set<Student>set = new TreeSet<>(new StudentNameComparator());
+		Set<Student>set = new TreeSet<>(new StudentNameAndCityComparator());
 		set.add(s1);
 		set.add(s2);
 		set.add(s3);
+		set.add(s4);
 		
 		System.out.println(set);
 	}
