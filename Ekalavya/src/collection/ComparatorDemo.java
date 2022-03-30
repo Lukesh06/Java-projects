@@ -7,12 +7,12 @@ public class ComparatorDemo {
 
 	public static void main(String[] args) {
 		
-		Set set2 = new TreeSet<>();
+		Set<Integer> set2 = new TreeSet<>(new IntegerDescendingComparator());
 		
-		set2.add(null);
+		set2.add(25);
 		set2.add(30);
-		set2.add(false);
-		set2.add(2.5);
+		set2.add(-8);
+		set2.add(5);
 		
 		System.out.println(set2);
 		
