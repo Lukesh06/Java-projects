@@ -10,7 +10,7 @@ public class DBUtility {
 			Class.forName("com.mysql.jdbc.Driver");
 
 			Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/javaapplications", "root",
-					"Lukesh@06101990");
+					"************");
 
 			PreparedStatement stmt = connection
 					.prepareStatement("insert into Users (USER_NAME,FIRST_NAME,LAST_NAME,CITY) values(?,?,?,?)");
@@ -36,7 +36,7 @@ public class DBUtility {
 			Class.forName("com.mysql.jdbc.Driver");
 
 			Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/javaapplications", "root",
-					"Lukesh@06101990");
+					"************");
 
 			PreparedStatement stmt = connection.prepareStatement("Select * from Users where USER_ID = ?");
 
