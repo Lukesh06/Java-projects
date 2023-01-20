@@ -149,6 +149,8 @@ tr:nth-child(even){background-color: #f2f2f2}
 		</table>
 
 		<script>
+			var $ = require("jquery");
+                        window.$ = window.jQuery = $;
 			$(document).ready(function() {
 				$("#gfg").on("keyup", function() {
 					var value = $(this).val().toLowerCase();
