@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+</style>
+</head>
+
+<body>
+	<div style="overflow-x:auto;">
+		<h1>Pune Vidya Nagar BK Details</h1>
+		
+		<b>Search the table Student Details
+		<input id="gfg" type="text"
+				placeholder="Search here">
+		</b>
+		<br>
+		<br>
+		<table>
+			<tr>
+				<th>Name</th>
+				<th>Age Till 2022</th>
+				<th>Gyan Age Till 2022</th>
+				<th>Contact Number</th>
+				<th>Address</th>
+			</tr>
+			<tbody id="geeks">
+				<tr>
+					<td>Aarti Naresh Agarwal</td>
+					<td>52</td>
+					<td>6</td>
+					<td>9175936002</td>
+					<td>Gurukrupa Apartment, C3&4, Kasturba Society, Vishrantwadi, Pune, Pune, Maharashtra, India - 411015</td>
+				</tr>
+				<tr>
+					<td>Naresh Rajkumar Agarwal</td>
+					<td>58</td>
+					<td>6</td>
+					<td>9371001563</td>
+					<td>Gurukrupa Apartment, C3&4, Kasturba Society, Vishrantwadi, Pune, Pune, Maharashtra, India - 411015</td>
+				</tr>
+				<tr>
+					<td>Vinod Jeetram Agarwal</td>
+					<td>58</td>
+					<td>6</td>
+					<td>8446087234</td>
+					<td>White House Society Flat No 6/24 Air Port Road Near Gunjan Talkies Yerwada Pune Maharashtra 411006</td>
+				</tr>
+				<tr>
+					<td>Rita Vinod Agarwal</td>
+					<td>56</td>
+					<td>6</td>
+					<td>7276223965</td>
+					<td>White House Society Flat No 6/24 Air Port Road Near Gunjan Talkies Yerwada Pune Maharashtra 411006</td>
+				</tr>
+				<tr>
+					<td>Shakuntala Dadaram Sonde</td>
+					<td>70</td>
+					<td>17</td>
+					<td>8390902174</td>
+					<td>Survey No 153 Pandu Rajguru chal Near MSEB office Yerwada Pune Maharashtra 411006</td>
+				</tr>
+				<tr>
+					<td>Rohini Chandrashekhar Admane</td>
+					<td>45</td>
+					<td>6</td>
+					<td>7385279641</td>
+					<td>G/404, Ganga Kunj Society, Alandi Road Kalas Pune, Pune, Maharashtra, India - 411015</td>
+				</tr>
+				<tr>
+					<td>Sonali Kalidas Chaudhary</td>
+					<td>45</td>
+					<td>6</td>
+					<td>7798858875</td>
+					<td>Ashwamegh Bungalow Lane No.7 Tingrenagar, Vidyanagar, Pune City, Pune, Pune, Maharashtra, India - 411032</td>
+				</tr>
+				<tr>
+					<td>Laxmi Sumit Nandan</td>
+					<td>34</td>
+					<td>12</td>
+					<td>8600142605</td>
+					<td>Flat No 409 A/3 Atria Society Lane No 13 Near RK Puram Society Tingre Nagar Pune Maharashtra 411015</td>
+				</tr>
+				<tr>
+					<td>Minakshi Kakasaheb Somwanshi</td>
+					<td>57</td>
+					<td>6</td>
+					<td>9823697475</td>
+					<td>Warwanto Po Harangul Kh, Latur Maharashtra 413512</td>
+				</tr>
+				
+				<tr>
+					<td>Mangala Waman Kumbhar</td>
+					<td>65</td>
+					<td>1</td>
+					<td>7414902617</td>
+					<td>House No 20 Azad Ali Yerwada Pune Maharashtra 411006</td>
+				</tr>	
+				<tr>
+					<td>Deepak Bhimrao Kamble</td>
+					<td>52</td>
+					<td>9</td>
+					<td>9850565433</td>
+					<td>Flat No 404 Building No A-1-A Mahalaxmi Vihar Alandi Road Near Bigbazar Vishrantwadi Pune Maharashtra 411015</td>
+				</tr>
+				<tr>
+					<td>Vijay Kumar Singh</td>
+					<td>49</td>
+					<td>1</td>
+					<td>8149130954</td>
+					<td>Survey No 258/2B Plot 4 Room No 1 Khese Park Road 3 Lohegaon Pune Maharashtra 411032</td>
+				</tr>
+				<tr>
+					<td>Lata Ramesh Pawar</td>
+					<td>58</td>
+					<td>11</td>
+					<td>9420182406</td>
+					<td>Survey No 33/1 Plot 90 Rishi dhara Flat 7 Lane No 13 Near Ghule Floar Mill Tingre Nagar Pune Maharashtra 411032</td>
+				</tr>
+				<tr>
+					<td>Suman Sampat Waman</td>
+					<td>57</td>
+					<td>24</td>
+					<td>9923014058</td>
+					<td>Jorve Road Vakan Vasti Kolhewadi Post Kolhewadi Tahsil Sangamner Ahmadnagar Maharashtra 422605</td>
+				</tr>
+				<tr>
+					<td>Hirkan Haridas Panchal</td>
+					<td>63</td>
+					<td>11</td>
+					<td>8329865856</td>
+					<td>Survey No 33/1 plot No 39 Road No 13 J Tingre Nagar 411032 Pune Maharashtra 411032  </td>
+				</tr>
+			</tbody>
+		</table>
+
+		<script>
+			$(document).ready(function() {
+				$("#gfg").on("keyup", function() {
+					var value = $(this).val().toLowerCase();
+					$("#geeks tr").filter(function() {
+						$(this).toggle($(this).text()
+						.toLowerCase().indexOf(value) > -1)
+					});
+				});
+			});
+		</script>
+<div style="overflow-x:auto;">
+
+</body>
+
+</html>
